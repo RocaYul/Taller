@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taller.Common", "taller.Common\taller.Common.csproj", "{FB33D4D6-9772-4FB1-81CB-BE1B9F50EA20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taller.Functions", "taller.Functions\taller.Functions.csproj", "{F35AB828-7E9F-479F-A5A9-30861B891EB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taller.Test", "taller.Test\taller.Test.csproj", "{37512D7A-898A-44F2-8FBC-80476ABEDDC8}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB33D4D6-9772-4FB1-81CB-BE1B9F50EA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB33D4D6-9772-4FB1-81CB-BE1B9F50EA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB33D4D6-9772-4FB1-81CB-BE1B9F50EA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB33D4D6-9772-4FB1-81CB-BE1B9F50EA20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35AB828-7E9F-479F-A5A9-30861B891EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35AB828-7E9F-479F-A5A9-30861B891EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35AB828-7E9F-479F-A5A9-30861B891EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35AB828-7E9F-479F-A5A9-30861B891EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37512D7A-898A-44F2-8FBC-80476ABEDDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37512D7A-898A-44F2-8FBC-80476ABEDDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37512D7A-898A-44F2-8FBC-80476ABEDDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37512D7A-898A-44F2-8FBC-80476ABEDDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
