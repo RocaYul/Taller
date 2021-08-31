@@ -4,7 +4,7 @@ using System.Text;
 
 namespace taller.Common.Response
 {
-    class Response
+    public class Response
     {
         public bool IsSuccess { get; set; }
         public string Message { get; set; }

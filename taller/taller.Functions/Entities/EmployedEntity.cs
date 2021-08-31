@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.Storage.Table;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace taller.Functions.Entities
 {
-    class EmployedEntity
+    class EmployedEntity : TableEntity
     {
         public int IdEmployed { get; set; }
         public DateTime InputOutput { get; set; }

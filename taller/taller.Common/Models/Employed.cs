@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace taller.Common.Models
 {
-    class Employed
+    public class Employed
     {
-        public DateTime createdTime { get; set; }
-        public string TaskDescription { get; set; }
-        public bool IsComplete { get; set; }
+        public int IdEmployed { get; set; }
+        public DateTime InputOutput { get; set; }
+        public int Type { get; set; }
+        public bool Consolidated { get; set; }
 
     }
 }
