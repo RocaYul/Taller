@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.Common", "Taller.Common\Taller.Common.csproj", "{57672D23-BEEB-415E-ADFC-A55BD619C7B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller.Common", "Taller.Common\Taller.Common.csproj", "{57672D23-BEEB-415E-ADFC-A55BD619C7B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.Functions", "Taller.Functions\Taller.Functions.csproj", "{6F186FA0-268B-4002-89AF-3E1B1E5E1C0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller.Functions", "Taller.Functions\Taller.Functions.csproj", "{6F186FA0-268B-4002-89AF-3E1B1E5E1C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller.Test", "Taller.Test\Taller.Test.csproj", "{CE7B16CF-3923-43FC-9A7F-5FF08BE28C14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller.Test", "Taller.Test\Taller.Test.csproj", "{CE7B16CF-3923-43FC-9A7F-5FF08BE28C14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

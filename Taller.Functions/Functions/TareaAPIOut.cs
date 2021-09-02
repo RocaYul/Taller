@@ -14,12 +14,12 @@ using Taller.Functions.Entities;
 
 namespace Taller.Functions.Functions
 {
-    public static class TareaAPI
+    public static class TareaAPIOut
     {
         //Created of employed
-        [FunctionName(nameof(TareaAPI))]
-        public static async Task<IActionResult> CreateEmployed(
-             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "employedIn")] HttpRequest req,
+        [FunctionName(nameof(TareaAPIOut))]
+        public static async Task<IActionResult> CreateEmployedOut(
+             [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "employedOut")] HttpRequest req,
              [Table("Employed", Connection = "AzureWebJobsStorage")] CloudTable employedTable,
              ILogger log)
         {
@@ -45,7 +45,7 @@ namespace Taller.Functions.Functions
             {
                 IdEmployed = employed.IdEmployed,
                 InputOutput = DateTime.UtcNow, //London time
-                Type = 0,
+                Type = 1,
                 Consolidated = false,
                 ETag = "*",
                 PartitionKey = "EMPLOYED",
@@ -56,7 +56,7 @@ namespace Taller.Functions.Functions
             TableOperation addOperation = TableOperation.Insert(employedEntity);
             await employedTable.ExecuteAsync(addOperation);
 
-            string message = "New employed stored in table";
+            string message = "New employed stored in table Out";
             log.LogInformation(message);
 
             return new OkObjectResult(new Response
@@ -68,9 +68,9 @@ namespace Taller.Functions.Functions
         }
 
         //Update a Task, this is with put because is update a register  
-        [FunctionName(nameof(TareaUpdate))]
-        public static async Task<IActionResult> TareaUpdate(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "employedIn/{id}")] HttpRequest req,
+        [FunctionName(nameof(TareaUpdateOut))]
+        public static async Task<IActionResult> TareaUpdateOut(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "employedOut/{id}")] HttpRequest req,
             [Table("Employed", Connection = "AzureWebJobsStorage")] CloudTable employedTable,
             string id,
             ILogger log)
@@ -116,33 +116,9 @@ namespace Taller.Functions.Functions
             });
         }
 
-        //Recuperate task- get all task
-        [FunctionName(nameof(GetAllEmployed))]
-        public static async Task<IActionResult> GetAllEmployed(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "employedIn")] HttpRequest req,
-            [Table("Employed", Connection = "AzureWebJobsStorage")] CloudTable employedTable,
-            ILogger log)
-        //Siempre inyectar request aunque no se necesite
-        {
-            log.LogInformation("Get all employed received");
-
-            TableQuery<EmployedEntity> query = new TableQuery<EmployedEntity>();
-            TableQuerySegment<EmployedEntity> employed = await employedTable.ExecuteQuerySegmentedAsync(query, null);
-
-            string message = "Retrieved all employed";
-            log.LogInformation(message);
-
-            return new OkObjectResult(new Response
-            {
-                IsSuccess = true,
-                Message = message,
-                Result = employed
-            });
-        }
-
-        [FunctionName(nameof(DeleteEmployed))]
-        public static async Task<IActionResult> DeleteEmployed(
-           [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "employedIn/{id}")] HttpRequest req,
+        [FunctionName(nameof(DeleteEmployedOut))]
+        public static async Task<IActionResult> DeleteEmployedOut(
+           [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "employedOut/{id}")] HttpRequest req,
            [Table("Employed", "EMPLOYED", "{id}", Connection = "AzureWebJobsStorage")] EmployedEntity employedEntity,
            [Table("Employed", Connection = "AzureWebJobsStorage")] CloudTable employedTable,
            string id,
