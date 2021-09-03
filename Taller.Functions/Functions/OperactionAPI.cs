@@ -20,6 +20,5 @@ namespace Taller.Functions.Functions
                 Result = completedTareas
             });
         */
-
     }
 }

@@ -7,6 +7,11 @@ namespace Taller.Functions.Entities
 {
     public class EmployedEntity : TableEntity
     {
+
+        public EmployedEntity()
+        {
+                
+        }
         public int IdEmployed { get; set; }
         public DateTime InputOutput { get; set; }
         public int Type { get; set; }
